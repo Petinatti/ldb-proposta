@@ -328,19 +328,10 @@ function trocarVideo(idx){
   }, 400);
 }
 
-var hideTimeout;
-function resetHide(){
-  clearTimeout(hideTimeout);
-  document.getElementById('topBar').classList.remove('hidden');
-  document.getElementById('chapters').classList.remove('hidden');
-  hideTimeout = setTimeout(function(){
-    document.getElementById('topBar').classList.add('hidden');
-    document.getElementById('chapters').classList.add('hidden');
-  }, 4000);
-}
-document.addEventListener('mousemove', resetHide);
-document.addEventListener('touchstart', resetHide);
-resetHide();
+// Os botões de capítulo e o botão de baixar ficam SEMPRE visíveis
+// nesta página de entrega, para a noiva nunca "perder" o download de vista.
+document.getElementById('topBar').classList.remove('hidden');
+document.getElementById('chapters').classList.remove('hidden');
 </script>
 </body>
 </html>
